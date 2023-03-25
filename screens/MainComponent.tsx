@@ -1,4 +1,4 @@
-import { View, Platform, Text } from 'react-native';
+import { View, Platform } from 'react-native';
 import Constants from 'expo-constants';
 import HomeScreen from './HomeScreen';
 import { createStackNavigator } from '@react-navigation/stack';
