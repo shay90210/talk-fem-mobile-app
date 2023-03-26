@@ -13,8 +13,8 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const screenOptions = {
-    headerTintColor: '#c3195d',
-    headerStyle: { backgroundColor: '#f48db4' }
+    headerTintColor: '#ECF0F1',
+    headerStyle: { backgroundColor: '#CD5C5C' }
 }
 
 const HomeNavigator = () => {
@@ -115,9 +115,9 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     stackIcon: {
-        marginLeft: 10,
-        color: '#8a1253',
-        fontSize: 28
+        marginLeft: 20,
+        color: '#ECF0F1',
+        fontSize: 30
     },
 });
 

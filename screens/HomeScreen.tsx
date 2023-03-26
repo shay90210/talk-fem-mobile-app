@@ -6,7 +6,6 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <ImageBackground source={localImage} resizeMode='cover' style={styles.image}>
-                <Text>HOME SCREEN</Text>
             </ImageBackground>
         </View>
     )
