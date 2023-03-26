@@ -25,7 +25,7 @@ const HomeNavigator = () => {
                 name='Home'
                 component={HomeScreen}
                 options={({ navigation }) => ({
-                    title: 'Home',
+                    title: 'HOME',
                     headerLeft: () => (
                         <Icon
                             name='home'
@@ -48,7 +48,7 @@ const EpisodeNavigator = () => {
                 name='Episodes'
                 component={EpisodeScreen}
                 options={({ navigation }) => ({
-                    title: 'Episodes',
+                    title: 'PODCAST EPISODES',
                     headerLeft: () => (
                         <Icon
                             name='headphones'
