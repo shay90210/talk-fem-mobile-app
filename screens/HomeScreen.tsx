@@ -6,7 +6,8 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <ImageBackground source={localImage} resizeMode='cover' style={styles.image}>
-                <Text style={styles.text}>Women expressing their thoughts like it's no one else's F***ing concern.</Text>
+                <Text style={styles.text}>express yourself.</Text>
+                <Text style={styles.text}>Period.</Text>
             </ImageBackground>
         </View>
     )
@@ -23,9 +24,8 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 30,
         textAlign: 'center',
-        marginBottom: 600,
         fontWeight: 'bold',
-        color: '#ECF0F1'
+        color: '#CD5C5C'
     },
 })
 
