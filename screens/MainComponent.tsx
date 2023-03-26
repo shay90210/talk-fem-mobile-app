@@ -1,13 +1,17 @@
-import { View, Platform, StyleSheet } from 'react-native';
+import { View, Platform, StyleSheet, Image, Text } from 'react-native';
 import Constants from 'expo-constants';
 
 import HomeScreen from './HomeScreen';
 import EpisodeScreen from './EpisodeScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 
 import { Icon } from '@rneui/themed';
+
+const localImage = require('../assets/logo.png')
+
+interface CustomDrawerContentProps extends DrawerContentComponentProps { }
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -63,6 +67,20 @@ const EpisodeNavigator = () => {
     )
 }
 
+const CustomDrawerContent = (props: CustomDrawerContentProps) => (
+    <DrawerContentScrollView {...props}>
+        <View style={styles.drawerHeader}>
+            <View style={{ flex: 1 }}>
+                <Image source={localImage} style={styles.drawerImage} />
+            </View>
+            <View style={{ flex: 2 }}>
+                <Text style={styles.drawerHeaderText}>Talk Your FemSH!T</Text>
+            </View>
+        </View>
+        <DrawerItemList {...props} labelStyle={{ fontWeight: 'bold' }} />
+    </DrawerContentScrollView >
+)
+
 const Main = () => {
     return (
         <View
@@ -75,6 +93,7 @@ const Main = () => {
             <Drawer.Navigator
                 initialRouteName='Home'
                 drawerStyle={{ backgroundColor: 'white' }}
+                drawerContent={CustomDrawerContent}
             >
                 <Drawer.Screen
                     name='Home'
@@ -118,6 +137,26 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         color: '#ECF0F1',
         fontSize: 30
+    },
+    drawerImage: {
+        margin: 10,
+        height: 80,
+        width: 80,
+        borderRadius: 50
+    },
+    drawerHeader: {
+        backgroundColor: '#CD5C5C',
+        height: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
+    },
+    drawerHeaderText: {
+        color: '#fff',
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginLeft: 10
     },
 });
 
