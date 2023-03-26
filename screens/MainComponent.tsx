@@ -101,7 +101,7 @@ const Main = () => {
                             <Icon
                                 name='headphones'
                                 type='font-awesome'
-                                size={24}
+                                size={28}
                                 iconStyle={{ width: 24 }}
                                 color={color}
                             />
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         color: '#8a1253',
         fontSize: 28
-    }
+    },
 });
 
 export default Main;
