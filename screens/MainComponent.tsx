@@ -116,8 +116,8 @@ const Main = () => {
 const styles = StyleSheet.create({
     stackIcon: {
         marginLeft: 10,
-        color: '#fff',
-        fontSize: 24
+        color: '#8a1253',
+        fontSize: 28
     }
 });
 
