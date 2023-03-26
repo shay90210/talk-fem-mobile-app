@@ -1,4 +1,4 @@
-import { View, Platform } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 import HomeScreen from './HomeScreen';
@@ -6,6 +6,8 @@ import EpisodeScreen from './EpisodeScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import { Icon } from '@rneui/themed';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -22,7 +24,17 @@ const HomeNavigator = () => {
             <Stack.Screen
                 name='Home'
                 component={HomeScreen}
-                options={{ title: 'Home' }}
+                options={({ navigation }) => ({
+                    title: 'Home',
+                    headerLeft: () => (
+                        <Icon
+                            name='home'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    )
+                })}
             />
         </Stack.Navigator>
     )
@@ -30,11 +42,22 @@ const HomeNavigator = () => {
 
 const EpisodeNavigator = () => {
     return (
+
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
                 name='Episodes'
                 component={EpisodeScreen}
-                options={{ title: 'Episodes' }}
+                options={({ navigation }) => ({
+                    title: 'Episodes',
+                    headerLeft: () => (
+                        <Icon
+                            name='headphones'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    )
+                })}
             />
         </Stack.Navigator>
     )
@@ -56,16 +79,46 @@ const Main = () => {
                 <Drawer.Screen
                     name='Home'
                     component={HomeNavigator}
-                    options={{ title: 'Home' }}
+                    options={{
+                        title: 'Home',
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name='home'
+                                type='font-awesome'
+                                size={24}
+                                iconStyle={{ width: 24 }}
+                                color={color}
+                            />
+                        )
+                    }}
                 />
                 <Drawer.Screen
                     name='Episodes'
                     component={EpisodeNavigator}
-                    options={{ title: 'Episodes' }}
+                    options={{
+                        title: 'Episodes',
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name='headphones'
+                                type='font-awesome'
+                                size={24}
+                                iconStyle={{ width: 24 }}
+                                color={color}
+                            />
+                        )
+                    }}
                 />
             </Drawer.Navigator>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    stackIcon: {
+        marginLeft: 10,
+        color: '#fff',
+        fontSize: 24
+    }
+});
 
 export default Main;
