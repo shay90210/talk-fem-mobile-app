@@ -5,7 +5,8 @@
 ## PROJECT DESCRIPTION
 I am currently developing a mobile application for my TO BE DETERMINED podcast "Talk Your FEMSH!T". The podcast is an empowering outlet where women express their thoughts and feelings on many topics. This project incorporates expo, React Native, TypeScript, and many dependencies. This project also extends my learning beyong React. 
 
-## FEATURES
+## FEATURES 
+- Audio player
 
 ## INSTALLATION INSTRUCTIONS
 I installed the project with the following library and programming language. Keep in mind that there are two different types of installations depending on if you choose to TypeScript or JavaScript. This project does use TypeScript: 
@@ -29,4 +30,7 @@ Please install the following dependencies below to work the project:
 - expo install react-native-reanimated@2.2.0
 - expo install @react-navigation/drawer@5.12.9
 
+## USAGE INSTRUCTIONS (Coming Soon)
+
+## EXAMPLES OF PROJECT (Coming Soon)
 
