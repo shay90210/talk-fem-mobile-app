@@ -9,7 +9,7 @@ I am currently developing a mobile application for my TO BE DETERMINED podcast "
 - Audio player
 
 ## INSTALLATION INSTRUCTIONS
-I installed the project with the following library and programming language. Keep in mind that there are two different types of installations depending on if you choose to TypeScript or JavaScript. This project does use TypeScript: 
+I installed the project with the following library and programming language. Keep in mind that there are two different types of installations depending on if you choose to use TypeScript or JavaScript. This project does use TypeScript: 
 
 #### WITH TYPESCRIPT
 - npx create-expo-app --template
